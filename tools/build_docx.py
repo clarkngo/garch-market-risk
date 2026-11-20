@@ -11,7 +11,7 @@ the two-column body is included; sections due in a later stage are rendered as
 a heading plus a "to be completed" note listing their planned subsections.
 
 Usage:  python3 tools/build_docx.py [--stage N]
-        ->  build/scenario-stat-modeling-draft1.docx (stage defaults to content.json "draft.stage")
+        ->  build/garch-market-risk-draft1.docx (stage defaults to content.json "draft.stage")
 """
 import argparse
 import json
@@ -250,5 +250,5 @@ if __name__ == "__main__":
     stage = ap.parse_args().stage
     name = "final" if stage == 3 else f"draft{stage}"
     out = Builder(paper, results, stage).build(
-        os.path.join(ROOT, "build", f"scenario-stat-modeling-{name}.docx"))
+        os.path.join(ROOT, "build", f"garch-market-risk-{name}.docx"))
     print("wrote", os.path.relpath(out, ROOT))

@@ -1,6 +1,6 @@
 """Build a 16:9 PowerPoint deck from paper/content.json and results/garch_results.json.
 
-Usage:  python3 tools/build_pptx.py      ->  build/scenario-stat-modeling.pptx
+Usage:  python3 tools/build_pptx.py      ->  build/garch-market-risk.pptx
 """
 import json
 import os
@@ -113,9 +113,9 @@ def build(out):
             table(s, ["Model", "Breaches", "Rate", "Feb–Apr 2020", "−log L / day"], rows)
 
     s = blank(prs, "Resources", "Paper, code, and live demo")
-    bullets(s, ["Portal: https://clarkngo.github.io/scenario-stat-modeling/",
-                "Slides: https://clarkngo.github.io/scenario-stat-modeling/presentations/ds623-scenario-stat-modeling.html",
-                "Code: https://github.com/clarkngo/scenario-stat-modeling"])
+    bullets(s, ["Portal: https://clarkngo.github.io/garch-market-risk/",
+                "Slides: https://clarkngo.github.io/garch-market-risk/presentations/ds623-garch-market-risk.html",
+                "Code: https://github.com/clarkngo/garch-market-risk"])
 
     os.makedirs(os.path.dirname(out), exist_ok=True)
     prs.save(out)
@@ -123,5 +123,5 @@ def build(out):
 
 
 if __name__ == "__main__":
-    out = build(os.path.join(ROOT, "build", "scenario-stat-modeling.pptx"))
+    out = build(os.path.join(ROOT, "build", "garch-market-risk.pptx"))
     print("wrote", os.path.relpath(out, ROOT))

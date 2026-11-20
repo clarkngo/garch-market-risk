@@ -1,4 +1,4 @@
-# scenario-stat-modeling
+# garch-market-risk
 
 **Forecasting Market Risk from Scratch: Revising GARCH into an Asymmetric, Heavy-Tailed Model for Value-at-Risk**
 Clark Jason Ngo & Manas Teja Katakam · DS 623 Math and Statistics for Data Science · City University of Seattle
@@ -7,9 +7,9 @@ Clark Jason Ngo & Manas Teja Katakam · DS 623 Math and Statistics for Data Scie
 
 We derive GARCH(1,1) from first principles, implement it and its maximum-likelihood fitting in NumPy, test it as a daily Value-at-Risk model on real US market returns, and revise the two assumptions that fail (equal reaction to good and bad news, and normal shocks) into GJR-GARCH with Student-t errors. The portal's lab replays the 2020 crash and other periods in the browser.
 
-- Portal: https://clarkngo.github.io/scenario-stat-modeling/
-- Slides: https://clarkngo.github.io/scenario-stat-modeling/presentations/ds623-scenario-stat-modeling.html
-- Study guide (terms, our numbers, likely questions): https://clarkngo.github.io/scenario-stat-modeling/presentations/defense-guide.html
+- Portal: https://clarkngo.github.io/garch-market-risk/
+- Slides: https://clarkngo.github.io/garch-market-risk/presentations/ds623-garch-market-risk.html
+- Study guide (terms, our numbers, likely questions): https://clarkngo.github.io/garch-market-risk/presentations/defense-guide.html
 
 ## GARCH study (chosen project direction)
 
@@ -53,7 +53,7 @@ make data     # re-download the latest French data
 | `model/baseline.py`, `model/revised.py`, `model/scenario.py`, `model/run_experiment.py` | Earlier OLS → Huber prototype on synthetic data (kept for reference; not used by the portal) |
 | `paper/content.json` | **Single source of paper text**, used by the portal, DOCX, and PPTX |
 | `index.html`, `style.css`, `script.js` | GitHub Pages portal: MathJax paper, in-browser Value-at-Risk lab on the real data, code tabs |
-| `presentations/ds623-scenario-stat-modeling.html` | HTML slide deck (←/→, F for fullscreen) |
+| `presentations/ds623-garch-market-risk.html` | HTML slide deck (←/→, F for fullscreen) |
 | `tools/build_docx.py` | Word paper in the course-paper format (2-column body, APA tables/figures), built per draft stage |
 | `tools/build_pptx.py` | PowerPoint deck |
 | `tools/make_figures.py` | Paper figures (matplotlib is used for plotting only) |
@@ -61,7 +61,7 @@ make data     # re-download the latest French data
 ## Build locally
 
 ```bash
-make all      # tests, experiment, figures, build/scenario-stat-modeling.docx and .pptx
+make all      # tests, experiment, figures, build/garch-market-risk.docx and .pptx
 make serve    # http://localhost:8623 (the portal fetches JSON, so open it over HTTP, not file://)
 ```
 
@@ -74,7 +74,7 @@ The course requires two drafts before the final paper. Sections and references i
 - **Final Paper:** all sections plus the code appendices.
 
 ```bash
-python3 tools/build_docx.py             # current stage -> build/scenario-stat-modeling-draft1.docx
+python3 tools/build_docx.py             # current stage -> build/garch-market-risk-draft1.docx
 python3 tools/build_docx.py --stage 2   # preview a later stage
 ```
 
